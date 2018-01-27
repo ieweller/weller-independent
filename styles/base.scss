@@ -1,0 +1,542 @@
+$pri-color: #39C0C4;
+$sec-color: #FFCC67;
+$alt-color: lighten($pri-color, 10%);
+$light: #ffffff;
+$dark: #303C3D;
+$alt-dark: #4C6060;
+$shadow-color: RGBA(48,60,61,0.8);
+$transparent: rgba(0, 0, 0, 0.0);
+
+$pri-font: 'Montserrat', sans-serif;
+$sec-font: 'Merriweather', serif;
+
+@import "media.scss";
+
+%page-block {
+  box-sizing: border-box;
+  left: 0;
+  margin: 0;
+  padding: 24px 24px;
+  width: 100%;
+}
+
+%input--text {
+  border-radius: 6px;
+  box-sizing: border-box;
+  color: $dark;
+  font-family: $pri-font;
+  font-size: 1em;
+  height: 3em;
+  width: 100%;
+  border: 0;
+  padding: 12px;
+
+  &::placeholder {
+    color: $shadow-color;
+    font-family: $pri-font;
+  }
+
+  &:focus {
+    box-shadow: 0 2px 4px $shadow-color;
+  }
+}
+
+@mixin button($text-color, $color: $transparent) {
+  background-color: $color;
+  border: 1px solid $light;
+  border-radius: 8px;
+  box-sizing: border-box;
+  color: $text-color;
+  font-family: $pri-font;
+  padding: 12px 24px;
+  text-decoration: none;
+  text-transform: uppercase;
+  transition: all 0.3s ease-in-out;
+  white-space: nowrap;
+  -webkit-appearance: none;
+
+  &:hover, &:focus {
+    background-color: darken($color, 10%);
+    border: 1px solid darken($light, 5%);
+    box-shadow: 0 0 5px $shadow-color;
+    cursor: pointer;
+  }
+}
+
+body {
+  width: 100%;
+  margin: 0;
+}
+
+
+/*! Header Section */
+header {
+
+  nav {
+    justify-content: space-between;
+    background: $pri-color;
+    box-sizing: border-box;
+    display: flex;
+    flex-flow: row nowrap;
+    font-family: $pri-font;
+    left: 0;
+    padding: 12px 24px;
+    position: fixed;
+    top: 0;
+    width: 100vw;
+    z-index: 99;
+
+    a.nav-logo {
+      background-image: url(../img/wi-logo-light-328x90.png);
+      background-size: contain;
+      background-repeat: no-repeat;
+      height: auto;
+      width: 164px;
+
+      @include responsive(small-screens) {
+        background-image: url(../img/wi-logograph-light-90x90.png);
+        min-width: 40px;
+        width: 45px;
+      }
+    }
+
+    ul {
+      li {
+        display: inline;
+        margin: 0 12px;
+
+        a {
+          color: $light;
+          text-decoration: none;
+          text-transform: uppercase;
+          transition: all 0.2s ease-in-out;
+
+          &:hover {
+            color: $sec-color;
+          }
+        }
+
+        &:first-child {
+          @include button($light, $sec-color);
+          a {
+            color: $light;
+          }
+        }
+
+      }
+    }
+
+  }
+
+  div#header--cover {
+    @extend %page-block;
+    align-items: center;
+    background: $pri-color;
+    color: $light;
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: flex-end;
+    height: 100vh;
+    max-height: 736px;
+    min-height: 460px;
+    padding-bottom: 18vh;
+    padding-top: 20vh;
+    text-align: center;
+
+    @include responsive(wide-screens) {
+      min-height: 80vh;
+      max-height: 80vh;
+    }
+
+    h1 {
+      font-family: $pri-font;
+      font-size: 2.5em;
+      margin-bottom: 24px;
+    }
+
+    p {
+      font-family: $sec-font;
+      font-size: 1.2em;
+      font-weight: 400;
+      margin-bottom: 48px;
+    }
+
+    a {
+      @include button($light);
+      font-size: 1.2em;
+    }
+  }
+}
+
+section#introduction {
+  @extend %page-block;
+  text-align: center;
+
+  h1 {
+    color: $dark;
+    font-family: $pri-font;
+    font-size: 2.5em;
+  }
+
+  h2 {
+    color: $alt-dark;
+    font-family: $sec-font;
+    font-size: 1em;
+    line-height: 2em;
+    max-width: 912px;
+    margin: 0 auto;
+  }
+}
+
+div#price-table--wrapper {
+  @extend %page-block;
+
+  section#price-table {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+    max-width: 960px;
+
+    @include responsive(wide-screens) {
+    }
+
+    @include responsive(medium-screens) {
+      flex-flow: column nowrap;
+    }
+
+    @include responsive(small-screens) {
+      flex-flow: column nowrap;
+    }
+
+    .price-table--card {
+      background: lighten($alt-color, 30%);
+      border-radius: 12px;
+      box-sizing: border-box;
+      flex: 1;
+      margin: 12px;
+      max-width: 320px;
+      padding: 24px 12px 36px 12px;
+      text-align: center;
+      transition: all 0.2s ease-in-out;
+      width: calc(33.333% - 24px);
+
+      @include responsive(medium-screens) {
+        min-width: 320px;
+      }
+
+      @include responsive(small-screens) {
+        min-width: 272px;
+      }
+
+      h1 {
+        color: $dark;
+        font-family: $pri-font;
+        font-size: 1.2em;
+        margin: 0;
+      }
+
+      h2 {
+        color: $alt-dark;
+        font-family: $sec-font;
+        font-size: 3em;
+        margin-top: 24px;
+        margin-bottom: 6px;
+
+        span.asterisk {
+          font-size: 0.5em;
+          line-height: 0.5em;
+          margin-bottom: 1em;
+        }
+      }
+
+      small {
+        color: $alt-dark;
+        font-family: $pri-font;
+        text-transform: uppercase;
+
+      }
+
+      ul {
+        color: $dark;
+        font-family: $sec-font;
+         list-style-position: inside;
+        line-height: 2em;
+        margin: 24px 0px 12px 0px;
+        padding: 0;
+      }
+
+      a {
+        @include button($light, $sec-color);
+      }
+
+      &:hover {
+        transform: scale(1.025);
+      }
+
+      &#featured {
+        background: $alt-color;
+        font-family: $pri-font;
+        padding-bottom: 36px;
+
+        .featured--label {
+          background: $sec-color;
+          box-shadow:  0 2px 2px $shadow-color;
+          border-radius: 12px 12px 0 0;
+          color: $dark;
+          letter-spacing: 3px;
+          font-weight: 700;
+          margin: -24px 12px 24px -12px;
+          padding: 12px;
+          text-transform: uppercase;
+          width: 100%;
+        }
+
+        h1, h2, small, ul {
+          color: $light;
+        }
+      }
+
+    }
+  }
+
+  p {
+    color: $dark;
+    font-family: $sec-font;
+    line-height: 1.5em;
+    max-width: 900px;
+    margin: 24px auto;
+    padding: 24px;
+    text-align: center;
+
+    a {
+      color: $alt-color;
+      transition: all 0.3s ease-in-out;
+
+      &:hover {
+        color: $sec-color;
+      }
+
+      &:visited {
+        color: $pri-color;
+      }
+    }
+  }
+}
+
+#portfolio-table--wrapper {
+  @extend %page-block;
+  background-color: #efefef;
+  padding-top: 48px;
+  padding-bottom: 48px;
+
+  div#portfolio-table {
+    display: flex;
+    flex-flow: column nowrap;
+    list-style: none;
+    align-items: center;
+    margin: 0 auto;
+
+    figure {
+      margin: 24px 0;
+      max-width: 600px;
+
+      img {
+        border-radius: 12px;
+        height: auto;
+        transition: all 0.3s ease-in-out;
+        width: 100%;
+
+        &:hover {
+          transform: scale(1.025);
+        }
+      }
+
+      figcaption {
+        font-family: $pri-font;
+        font-size: 1em;
+        font-weight: 700;
+        margin-top: 12px;
+        text-align: center;
+        text-transform: uppercase;
+      }
+    }
+  }
+}
+
+#testimonial-bar {
+  @extend %page-block;
+  background: $pri-color;
+  color: $light;
+  text-align: center;
+
+  blockquote {
+
+    p {
+      font-family: $pri-font;
+      font-size: 2em;
+
+      &:before {
+        content: open-quote;
+      }
+
+      &:after {
+        content: close-quote;
+      }
+    }
+
+    cite {
+      font-family: $sec-font;
+
+      &:before {
+        content: "- ";
+      }
+    }
+  }
+}
+
+footer {
+
+
+
+  #footer--contact {
+    @extend %page-block;
+    background: $alt-dark;
+    color: $light;
+
+    h1 {
+      font-family: $pri-font;
+      text-align: center;
+    }
+
+    #footer--contact--wrapper {
+
+      form {
+        margin: 0 auto;
+        max-width: 900px;
+
+        fieldset {
+          border: 0;
+
+          legend {
+            display: none;
+          }
+
+          label {
+            color: darken($light, 25%);
+            font-family: $pri-font;
+            font-size: 0.8em;
+            line-height: 3em;
+          }
+
+          label.error {
+            border-radius: 2px;
+            color: $sec-color;
+            height: 38px;
+            margin: 0 24px;
+          }
+
+          input[type="text"], input[type="tel"], input[type="email"], textarea {
+            @extend %input--text;
+            margin-bottom: 12px;
+          }
+
+          textarea {
+            min-height: 135px;
+          }
+        }
+
+        input[type="submit"] {
+          @include button($light, $pri-color);
+          font-size: 1em;
+          margin-top: 24px;
+
+          &:hover {
+            cursor: pointer;
+          }
+
+          &.formSent {
+            background-color: #303C3D !important;
+
+            &:hover{
+              cursor: default;
+            }
+          }
+        }
+
+        .quart_row {
+          box-sizing: border-box;
+          float: left;
+          padding-right: 24px;
+          width: 25%;
+
+          @include responsive(medium-screens) {
+            width: 100%;
+            padding-right: 0;
+          }
+
+          @include responsive(small-screens) {
+            width: 100%;
+            padding-right: 0;
+          }
+        }
+
+        .half_row {
+          box-sizing: border-box;
+          float: left;
+          padding-right: 24px;
+          width: 50%;
+
+          @include responsive(medium-screens) {
+            width: 100%;
+            padding-right: 0;
+          }
+
+          @include responsive(small-screens) {
+            width: 100%;
+            padding-right: 0;
+          }
+
+          &:last-child {
+            padding-right: 0;
+          }
+        }
+
+        .full_row {
+          display: flex;
+          flex-flow: row wrap;
+          width: 100%;
+        }
+
+        .centered {
+          align-items: center;
+          clear: both;
+          display: flex;
+          justify-content: center;
+          margin: 0 auto;
+        }
+      }
+
+      #message {
+        min-height: 30vh;
+        padding-top: 3em;
+        font-family: $sec-font;
+        text-align: center;
+
+        h2 {
+          font-size: 1em;
+          font-weight: 400;
+        }
+      }
+    }
+  }
+
+  #footer--copyright {
+    @extend %page-block;
+    background: $dark;
+    color: $light;
+    font-family: $pri-font;
+    text-align: center;
+  }
+}

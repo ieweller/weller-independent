@@ -1,0 +1,76 @@
+/****** 404 ******/
+
+#page-404 {
+  background: #ffffff;
+  display: flex;
+  flex-direction: column;
+  font-family: 'Source Sans Pro', sans-serif;
+}
+
+#page-404 h1, #page-404 h2 {
+  font-weight: 400;
+}
+
+#page-404 h1 {
+  font-size: 32px;
+}
+
+#page-404 h2 {
+  font-size: 22px;
+}
+
+#page-404 .content {
+  display: flex;
+  align-self: center;
+  flex: 1;
+  flex-flow: row;
+  max-width: 1024px;
+  padding: 8em 1em;
+}
+
+#page-404 .content .box {
+  display: flex;
+  flex-flow: row wrap;
+  align-content: center;
+  margin: 24px;
+}
+
+#page-404 .content .box.wide {
+  flex: 1;
+}
+
+#page-404 .content .box.narrow {
+  flex: 2;
+}
+
+#page-404 .content .box img {
+  align-self: center;
+}
+
+#page-404 .content .box.right {
+  justify-content: flex-end;
+}
+
+#page-404 .content .box.left {
+  justify-content: flex-start;
+}
+
+#page-404 .content a {
+  color: #48C2C5;
+  text-decoration: none;
+}
+
+#page-404 .content a:hover {
+  text-decoration: underline;
+}
+
+@media only screen and (max-width: 736px) {
+  #page-404 .content .box.right, #page-404 .content .box.left {
+    justify-content: center;
+  }
+  #page-404 .content {
+    flex-direction: column;
+    justify-content: flex-start;
+    align-content: flex-start;
+  }
+}

@@ -1,0 +1,402 @@
+header div#header--cover, section#introduction, div#price-table--wrapper, #portfolio-table--wrapper, #testimonial-bar, footer #footer--contact, footer #footer--copyright {
+  box-sizing: border-box;
+  left: 0;
+  margin: 0;
+  padding: 24px 24px;
+  width: 100%; }
+
+footer #footer--contact #footer--contact--wrapper form fieldset input[type="text"], footer #footer--contact #footer--contact--wrapper form fieldset input[type="tel"], footer #footer--contact #footer--contact--wrapper form fieldset input[type="email"], footer #footer--contact #footer--contact--wrapper form fieldset textarea {
+  border-radius: 6px;
+  box-sizing: border-box;
+  color: #303C3D;
+  font-family: "Montserrat", sans-serif;
+  font-size: 1em;
+  height: 3em;
+  width: 100%;
+  border: 0;
+  padding: 12px; }
+  footer #footer--contact #footer--contact--wrapper form fieldset input[type="text"]::placeholder, footer #footer--contact #footer--contact--wrapper form fieldset input[type="tel"]::placeholder, footer #footer--contact #footer--contact--wrapper form fieldset input[type="email"]::placeholder, footer #footer--contact #footer--contact--wrapper form fieldset textarea::placeholder {
+    color: RGBA(48, 60, 61, 0.8);
+    font-family: "Montserrat", sans-serif; }
+  footer #footer--contact #footer--contact--wrapper form fieldset input[type="text"]:focus, footer #footer--contact #footer--contact--wrapper form fieldset input[type="tel"]:focus, footer #footer--contact #footer--contact--wrapper form fieldset input[type="email"]:focus, footer #footer--contact #footer--contact--wrapper form fieldset textarea:focus {
+    box-shadow: 0 2px 4px RGBA(48, 60, 61, 0.8); }
+
+body {
+  width: 100%;
+  margin: 0; }
+
+/*! Header Section */
+header nav {
+  justify-content: space-between;
+  background: #39C0C4;
+  box-sizing: border-box;
+  display: flex;
+  flex-flow: row nowrap;
+  font-family: "Montserrat", sans-serif;
+  left: 0;
+  padding: 12px 24px;
+  position: fixed;
+  top: 0;
+  width: 100vw;
+  z-index: 99; }
+  header nav a.nav-logo {
+    background-image: url(../img/wi-logo-light-328x90.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+    height: auto;
+    width: 164px; }
+    @media only screen and (max-width: 420px) {
+      header nav a.nav-logo {
+        background-image: url(../img/wi-logograph-light-90x90.png);
+        min-width: 40px;
+        width: 45px; } }
+  header nav ul li {
+    display: inline;
+    margin: 0 12px; }
+    header nav ul li a {
+      color: #ffffff;
+      text-decoration: none;
+      text-transform: uppercase;
+      transition: all 0.2s ease-in-out; }
+      header nav ul li a:hover {
+        color: #FFCC67; }
+    header nav ul li:first-child {
+      background-color: #FFCC67;
+      border: 1px solid #ffffff;
+      border-radius: 8px;
+      box-sizing: border-box;
+      color: #ffffff;
+      font-family: "Montserrat", sans-serif;
+      padding: 12px 24px;
+      text-decoration: none;
+      text-transform: uppercase;
+      transition: all 0.3s ease-in-out;
+      white-space: nowrap;
+      -webkit-appearance: none; }
+      header nav ul li:first-child:hover, header nav ul li:first-child:focus {
+        background-color: #ffbb34;
+        border: 1px solid #f2f2f2;
+        box-shadow: 0 0 5px RGBA(48, 60, 61, 0.8);
+        cursor: pointer; }
+      header nav ul li:first-child a {
+        color: #ffffff; }
+
+header div#header--cover {
+  align-items: center;
+  background: #39C0C4;
+  color: #ffffff;
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: flex-end;
+  height: 100vh;
+  max-height: 736px;
+  min-height: 460px;
+  padding-bottom: 18vh;
+  padding-top: 20vh;
+  text-align: center; }
+  @media only screen and (min-width: 1200px) {
+    header div#header--cover {
+      min-height: 80vh;
+      max-height: 80vh; } }
+  header div#header--cover h1 {
+    font-family: "Montserrat", sans-serif;
+    font-size: 2.5em;
+    margin-bottom: 24px; }
+  header div#header--cover p {
+    font-family: "Merriweather", serif;
+    font-size: 1.2em;
+    font-weight: 400;
+    margin-bottom: 48px; }
+  header div#header--cover a {
+    background-color: transparent;
+    border: 1px solid #ffffff;
+    border-radius: 8px;
+    box-sizing: border-box;
+    color: #ffffff;
+    font-family: "Montserrat", sans-serif;
+    padding: 12px 24px;
+    text-decoration: none;
+    text-transform: uppercase;
+    transition: all 0.3s ease-in-out;
+    white-space: nowrap;
+    -webkit-appearance: none;
+    font-size: 1.2em; }
+    header div#header--cover a:hover, header div#header--cover a:focus {
+      background-color: transparent;
+      border: 1px solid #f2f2f2;
+      box-shadow: 0 0 5px RGBA(48, 60, 61, 0.8);
+      cursor: pointer; }
+
+section#introduction {
+  text-align: center; }
+  section#introduction h1 {
+    color: #303C3D;
+    font-family: "Montserrat", sans-serif;
+    font-size: 2.5em; }
+  section#introduction h2 {
+    color: #4C6060;
+    font-family: "Merriweather", serif;
+    font-size: 1em;
+    line-height: 2em;
+    max-width: 912px;
+    margin: 0 auto; }
+
+div#price-table--wrapper section#price-table {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+  align-items: center;
+  margin: 0 auto;
+  max-width: 960px; }
+  @media only screen and (max-width: 800px) {
+    div#price-table--wrapper section#price-table {
+      flex-flow: column nowrap; } }
+  @media only screen and (max-width: 420px) {
+    div#price-table--wrapper section#price-table {
+      flex-flow: column nowrap; } }
+  div#price-table--wrapper section#price-table .price-table--card {
+    background: #d6f2f3;
+    border-radius: 12px;
+    box-sizing: border-box;
+    flex: 1;
+    margin: 12px;
+    max-width: 320px;
+    padding: 24px 12px 36px 12px;
+    text-align: center;
+    transition: all 0.2s ease-in-out;
+    width: calc(33.333% - 24px); }
+    @media only screen and (max-width: 800px) {
+      div#price-table--wrapper section#price-table .price-table--card {
+        min-width: 320px; } }
+    @media only screen and (max-width: 420px) {
+      div#price-table--wrapper section#price-table .price-table--card {
+        min-width: 272px; } }
+    div#price-table--wrapper section#price-table .price-table--card h1 {
+      color: #303C3D;
+      font-family: "Montserrat", sans-serif;
+      font-size: 1.2em;
+      margin: 0; }
+    div#price-table--wrapper section#price-table .price-table--card h2 {
+      color: #4C6060;
+      font-family: "Merriweather", serif;
+      font-size: 3em;
+      margin-top: 24px;
+      margin-bottom: 6px; }
+      div#price-table--wrapper section#price-table .price-table--card h2 span.asterisk {
+        font-size: 0.5em;
+        line-height: 0.5em;
+        margin-bottom: 1em; }
+    div#price-table--wrapper section#price-table .price-table--card small {
+      color: #4C6060;
+      font-family: "Montserrat", sans-serif;
+      text-transform: uppercase; }
+    div#price-table--wrapper section#price-table .price-table--card ul {
+      color: #303C3D;
+      font-family: "Merriweather", serif;
+      list-style-position: inside;
+      line-height: 2em;
+      margin: 24px 0px 12px 0px;
+      padding: 0; }
+    div#price-table--wrapper section#price-table .price-table--card a {
+      background-color: #FFCC67;
+      border: 1px solid #ffffff;
+      border-radius: 8px;
+      box-sizing: border-box;
+      color: #ffffff;
+      font-family: "Montserrat", sans-serif;
+      padding: 12px 24px;
+      text-decoration: none;
+      text-transform: uppercase;
+      transition: all 0.3s ease-in-out;
+      white-space: nowrap;
+      -webkit-appearance: none; }
+      div#price-table--wrapper section#price-table .price-table--card a:hover, div#price-table--wrapper section#price-table .price-table--card a:focus {
+        background-color: #ffbb34;
+        border: 1px solid #f2f2f2;
+        box-shadow: 0 0 5px RGBA(48, 60, 61, 0.8);
+        cursor: pointer; }
+    div#price-table--wrapper section#price-table .price-table--card:hover {
+      transform: scale(1.025); }
+    div#price-table--wrapper section#price-table .price-table--card#featured {
+      background: #5fcdd1;
+      font-family: "Montserrat", sans-serif;
+      padding-bottom: 36px; }
+      div#price-table--wrapper section#price-table .price-table--card#featured .featured--label {
+        background: #FFCC67;
+        box-shadow: 0 2px 2px RGBA(48, 60, 61, 0.8);
+        border-radius: 12px 12px 0 0;
+        color: #303C3D;
+        letter-spacing: 3px;
+        font-weight: 700;
+        margin: -24px 12px 24px -12px;
+        padding: 12px;
+        text-transform: uppercase;
+        width: 100%; }
+      div#price-table--wrapper section#price-table .price-table--card#featured h1, div#price-table--wrapper section#price-table .price-table--card#featured h2, div#price-table--wrapper section#price-table .price-table--card#featured small, div#price-table--wrapper section#price-table .price-table--card#featured ul {
+        color: #ffffff; }
+
+div#price-table--wrapper p {
+  color: #303C3D;
+  font-family: "Merriweather", serif;
+  line-height: 1.5em;
+  max-width: 900px;
+  margin: 24px auto;
+  padding: 24px;
+  text-align: center; }
+  div#price-table--wrapper p a {
+    color: #5fcdd1;
+    transition: all 0.3s ease-in-out; }
+    div#price-table--wrapper p a:hover {
+      color: #FFCC67; }
+    div#price-table--wrapper p a:visited {
+      color: #39C0C4; }
+
+#portfolio-table--wrapper {
+  background-color: #efefef;
+  padding-top: 48px;
+  padding-bottom: 48px; }
+  #portfolio-table--wrapper div#portfolio-table {
+    display: flex;
+    flex-flow: column nowrap;
+    list-style: none;
+    align-items: center;
+    margin: 0 auto; }
+    #portfolio-table--wrapper div#portfolio-table figure {
+      margin: 24px 0;
+      max-width: 600px; }
+      #portfolio-table--wrapper div#portfolio-table figure img {
+        border-radius: 12px;
+        height: auto;
+        transition: all 0.3s ease-in-out;
+        width: 100%; }
+        #portfolio-table--wrapper div#portfolio-table figure img:hover {
+          transform: scale(1.025); }
+      #portfolio-table--wrapper div#portfolio-table figure figcaption {
+        font-family: "Montserrat", sans-serif;
+        font-size: 1em;
+        font-weight: 700;
+        margin-top: 12px;
+        text-align: center;
+        text-transform: uppercase; }
+
+#testimonial-bar {
+  background: #39C0C4;
+  color: #ffffff;
+  text-align: center; }
+  #testimonial-bar blockquote p {
+    font-family: "Montserrat", sans-serif;
+    font-size: 2em; }
+    #testimonial-bar blockquote p:before {
+      content: open-quote; }
+    #testimonial-bar blockquote p:after {
+      content: close-quote; }
+  #testimonial-bar blockquote cite {
+    font-family: "Merriweather", serif; }
+    #testimonial-bar blockquote cite:before {
+      content: "- "; }
+
+footer #footer--contact {
+  background: #4C6060;
+  color: #ffffff; }
+  footer #footer--contact h1 {
+    font-family: "Montserrat", sans-serif;
+    text-align: center; }
+  footer #footer--contact #footer--contact--wrapper form {
+    margin: 0 auto;
+    max-width: 900px; }
+    footer #footer--contact #footer--contact--wrapper form fieldset {
+      border: 0; }
+      footer #footer--contact #footer--contact--wrapper form fieldset legend {
+        display: none; }
+      footer #footer--contact #footer--contact--wrapper form fieldset label {
+        color: #bfbfbf;
+        font-family: "Montserrat", sans-serif;
+        font-size: 0.8em;
+        line-height: 3em; }
+      footer #footer--contact #footer--contact--wrapper form fieldset label.error {
+        border-radius: 2px;
+        color: #FFCC67;
+        height: 38px;
+        margin: 0 24px; }
+      footer #footer--contact #footer--contact--wrapper form fieldset input[type="text"], footer #footer--contact #footer--contact--wrapper form fieldset input[type="tel"], footer #footer--contact #footer--contact--wrapper form fieldset input[type="email"], footer #footer--contact #footer--contact--wrapper form fieldset textarea {
+        margin-bottom: 12px; }
+      footer #footer--contact #footer--contact--wrapper form fieldset textarea {
+        min-height: 135px; }
+    footer #footer--contact #footer--contact--wrapper form input[type="submit"] {
+      background-color: #39C0C4;
+      border: 1px solid #ffffff;
+      border-radius: 8px;
+      box-sizing: border-box;
+      color: #ffffff;
+      font-family: "Montserrat", sans-serif;
+      padding: 12px 24px;
+      text-decoration: none;
+      text-transform: uppercase;
+      transition: all 0.3s ease-in-out;
+      white-space: nowrap;
+      -webkit-appearance: none;
+      font-size: 1em;
+      margin-top: 24px; }
+      footer #footer--contact #footer--contact--wrapper form input[type="submit"]:hover, footer #footer--contact #footer--contact--wrapper form input[type="submit"]:focus {
+        background-color: #2e999c;
+        border: 1px solid #f2f2f2;
+        box-shadow: 0 0 5px RGBA(48, 60, 61, 0.8);
+        cursor: pointer; }
+      footer #footer--contact #footer--contact--wrapper form input[type="submit"]:hover {
+        cursor: pointer; }
+      footer #footer--contact #footer--contact--wrapper form input[type="submit"].formSent {
+        background-color: #303C3D !important; }
+        footer #footer--contact #footer--contact--wrapper form input[type="submit"].formSent:hover {
+          cursor: default; }
+    footer #footer--contact #footer--contact--wrapper form .quart_row {
+      box-sizing: border-box;
+      float: left;
+      padding-right: 24px;
+      width: 25%; }
+      @media only screen and (max-width: 800px) {
+        footer #footer--contact #footer--contact--wrapper form .quart_row {
+          width: 100%;
+          padding-right: 0; } }
+      @media only screen and (max-width: 420px) {
+        footer #footer--contact #footer--contact--wrapper form .quart_row {
+          width: 100%;
+          padding-right: 0; } }
+    footer #footer--contact #footer--contact--wrapper form .half_row {
+      box-sizing: border-box;
+      float: left;
+      padding-right: 24px;
+      width: 50%; }
+      @media only screen and (max-width: 800px) {
+        footer #footer--contact #footer--contact--wrapper form .half_row {
+          width: 100%;
+          padding-right: 0; } }
+      @media only screen and (max-width: 420px) {
+        footer #footer--contact #footer--contact--wrapper form .half_row {
+          width: 100%;
+          padding-right: 0; } }
+      footer #footer--contact #footer--contact--wrapper form .half_row:last-child {
+        padding-right: 0; }
+    footer #footer--contact #footer--contact--wrapper form .full_row {
+      display: flex;
+      flex-flow: row wrap;
+      width: 100%; }
+    footer #footer--contact #footer--contact--wrapper form .centered {
+      align-items: center;
+      clear: both;
+      display: flex;
+      justify-content: center;
+      margin: 0 auto; }
+  footer #footer--contact #footer--contact--wrapper #message {
+    min-height: 30vh;
+    padding-top: 3em;
+    font-family: "Merriweather", serif;
+    text-align: center; }
+    footer #footer--contact #footer--contact--wrapper #message h2 {
+      font-size: 1em;
+      font-weight: 400; }
+
+footer #footer--copyright {
+  background: #303C3D;
+  color: #ffffff;
+  font-family: "Montserrat", sans-serif;
+  text-align: center; }
