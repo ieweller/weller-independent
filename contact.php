@@ -5,7 +5,7 @@
 
   $name = $_POST['name']; // required
   $company = $_POST['company']; // required
-  $email_from = $_POST['email']; // required
+  $email_from = "contact@wellerindependent.com"; // required
   $phone = $_POST['phone']; // not required
   $comments = $_POST['details']; // required
 
@@ -26,6 +26,8 @@
   // create email headers
   $headers = 'From: '.$email_from."\r\n".
   'Reply-To: '.$email_from."\r\n";
+
+  // send mail with content
   mail($email_to, $email_subject, $email_message, $headers);
 
 ?>
