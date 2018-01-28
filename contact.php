@@ -1,11 +1,12 @@
 <?php
 
   $email_to = "contact@wellerindependent.com";
+  $email_from = "contact@wellerindependent.com";
   $email_subject = "Contact Request (Weller Independent)";
 
   $name = $_POST['name']; // required
   $company = $_POST['company']; // required
-  $email_from = "contact@wellerindependent.com"; // required
+  $email = $_POST['email']; // required
   $phone = $_POST['phone']; // not required
   $comments = $_POST['details']; // required
 
@@ -19,7 +20,7 @@
 
   $email_message .= "Name: ".clean_string($name)."\n";
   $email_message .= "Company: ".clean_string($company)."\n";
-  $email_message .= "Email: ".clean_string($email_from)."\n";
+  $email_message .= "Email: ".clean_string($email)."\n";
   $email_message .= "Telephone: ".clean_string($phone)."\n";
   $email_message .= "Project Details: ".clean_string($comments)."\n";
 
